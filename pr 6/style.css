@@ -1,0 +1,347 @@
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f7fa;
+
+    color: #333;
+
+    padding: 25px 6%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background-color: #174a7c;
+
+    color: white;
+
+    padding: 22px 25px;
+
+    border-radius: 5px;
+
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+header p {
+    margin: 0;
+
+    color: #dceaf6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    background-color: white;
+
+    border: 1px solid #d5dce3;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+nav button {
+    background: none;
+
+    border: none;
+
+    color: #245b89;
+
+    padding: 8px 15px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+nav button:hover {
+    background-color: #edf4fa;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    background-color: white;
+
+    border: 1px solid #d5dce3;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+    padding: 9px 11px;
+
+    margin-right: 8px;
+
+    border: 1px solid #bbc7d2;
+
+    border-radius: 3px;
+
+    font-size: 14px;
+
+    background-color: white;
+}
+
+.controls input {
+    width: 260px;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h2 {
+    color: #245b89;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+#eventContainer,
+#studentContainer,
+#noticeContainer,
+#faqContainer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.event,
+.student,
+.notice,
+.faq {
+
+    background-color: white;
+
+    border: 1px solid #d7dfe7;
+
+    border-radius: 4px;
+
+    padding: 18px;
+
+    min-height: 150px;
+}
+
+.event:hover,
+.student:hover,
+.notice:hover,
+.faq:hover {
+
+    border-color: #8da9bf;
+}
+
+
+/* =========================================
+   CARD HEADINGS
+========================================= */
+
+.event h3,
+.student h3,
+.notice h3,
+.faq h3 {
+
+    margin-top: 0;
+
+    color: #245b89;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.event p,
+.student p,
+.notice p,
+.faq p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+#loading {
+
+    background-color: #fff8e1;
+
+    border: 1px solid #f0d98c;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    color: #765c00;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+#error {
+    display: none;
+    color: #a12622;
+    background-color: #fff0ef;
+    border: 1px solid #e0aaa6;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.pagination button {
+
+    padding: 8px 15px;
+
+    border: 1px solid #357abd;
+
+    background-color: #357abd;
+
+    color: white;
+
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+
+    background-color: #d5dce3;
+
+    border-color: #d5dce3;
+
+    color: #777;
+
+    cursor: not-allowed;
+}
+
+#pageInfo {
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    #eventContainer,
+    #studentContainer,
+    #noticeContainer,
+    #faqContainer {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    #eventContainer,
+    #studentContainer,
+    #noticeContainer,
+    #faqContainer {
+
+        grid-template-columns: 1fr;
+    }
+
+    .controls input,
+    .controls select {
+
+        width: 100%;
+
+        margin: 5px 0;
+    }
+
+    nav button {
+
+        display: block;
+
+        width: 100%;
+
+        text-align: left;
+    }
+
+}

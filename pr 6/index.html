@@ -1,0 +1,227 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>College Information Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>College Information Portal</h1>
+
+    <nav>
+        <a href="#events">Events</a> |
+        <a href="#students">Students</a> |
+        <a href="#notices">Notices</a> |
+        <a href="#faqs">FAQs</a>
+    </nav>
+
+    <hr>
+
+    <h2 id="events">College Events</h2>
+
+    <input type="text" id="searchInput" placeholder="Search event">
+
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Competition">Competition</option>
+        <option value="Sports">Sports</option>
+        <option value="Seminar">Seminar</option>
+        <option value="Cultural">Cultural</option>
+    </select>
+
+    <select id="sortSelect">
+        <option value="">Sort</option>
+        <option value="dateAsc">Date: Earliest First</option>
+        <option value="dateDesc">Date: Latest First</option>
+        <option value="nameAsc">Name: A-Z</option>
+    </select>
+
+    <p id="loading">Loading...</p>
+
+    <p id="errorMessage"></p>
+
+    <div id="eventContainer"></div>
+
+    <div id="pagination"></div>
+
+
+    <hr>
+
+    <h2 id="students">Student Profiles</h2>
+
+    <div id="studentContainer"></div>
+
+
+    <hr>
+
+    <h2 id="notices">Notices</h2>
+    
+    <div id="noticeContainer"></div>
+
+
+    <hr>
+
+    <h2 id="faqs">FAQs</h2>
+
+    <div id="faqContainer"></div>
+
+
+    <hr>
+
+    <p>College Information Portal</p>
+
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>StudentHub</h1>
+        <p>College Events, Students, Notices and FAQs</p>
+    </header>
+
+
+    <!-- Navigation -->
+
+    <nav>
+        <button onclick="showSection('events')">Events</button>
+        <button onclick="showSection('students')">Students</button>
+        <button onclick="showSection('notices')">Notices</button>
+        <button onclick="showSection('faqs')">FAQs</button>
+    </nav>
+
+
+    <!-- Controls -->
+
+    <section class="controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search..."
+        >
+
+        <select id="filterSelect">
+            <option value="all">All Categories</option>
+        </select>
+
+        <select id="sortSelect">
+
+            <option value="default">
+                Default Order
+            </option>
+
+            <option value="asc">
+                A → Z
+            </option>
+
+            <option value="desc">
+                Z → A
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- Loading -->
+
+    <div id="loading">
+        Loading data...
+    </div>
+
+
+    <!-- Error -->
+
+    <div id="error"></div>
+
+
+    <!-- Content -->
+
+    <main id="content">
+
+        <section id="eventsSection">
+
+            <h2>College Events</h2>
+
+            <div id="eventContainer"></div>
+
+        </section>
+
+
+        <section id="studentsSection">
+
+            <h2>Student Profiles</h2>
+
+            <div id="studentContainer"></div>
+
+        </section>
+
+
+        <section id="noticesSection">
+
+            <h2>Notices</h2>
+
+            <div id="noticeContainer"></div>
+
+        </section>
+
+
+        <section id="faqsSection">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div id="faqContainer"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Pagination -->
+
+    <div class="pagination">
+
+        <button id="prevBtn">
+            Previous
+        </button>
+
+        <span id="pageInfo">
+            Page 1
+        </span>
+
+        <button id="nextBtn">
+            Next
+        </button>
+
+    </div>
+
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
